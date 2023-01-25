@@ -15,8 +15,6 @@ let lastFetchFinished = true;
 initialize();
 
 const syncSubscription = (subscriptionData: Subscription) => {
-    console.log(`Subscription: ${Subscription}`);
-    console.log(`Subscription: ${subscriptionData.url}`);
     return new Promise<void>((resolve) => {
         vinted.search(subscriptionData.url, false, false, {
             per_page: '20'
