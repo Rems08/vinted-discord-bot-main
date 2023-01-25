@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   vinted-discord-bot:
-    image: test-vinted
+    image: test-vinted-bot
     environment:
       VINTED_BOT_ADMIN_IDS: "317636589897515009"
       VINTED_BOT_TOKEN: "MTA2MzQwNTExNzU2ODcyOTE0OA.Ga7-8_.SZh4DuRlx4fLhn0c7l8LkhCcZQio4ljFhOF4XA"
@@ -31,4 +31,4 @@ services:
 volumes:
   pgdata:
     external:
-      name: bot-HYPER
+      name: bot-hyper

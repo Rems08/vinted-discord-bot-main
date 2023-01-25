@@ -8,7 +8,12 @@ WORKDIR /home/app
 
 RUN apk add --no-cache git
 
-RUN yarn install
+COPY ./app/api-fix/index.js /etc/index.js
+
+RUN yarn install && \
+    cp /etc/index.js /home/app/node_modules/vinted-api/index.js
+
+
 
 RUN yarn build
 
