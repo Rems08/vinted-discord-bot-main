@@ -31,5 +31,3 @@ Bien que le bot open source fonctionne parfaitement et soit très rapide, sa con
 [![banner](./banner.png)](https://distrobot.fr)
 
 ## Installation du bot open source
-
-**Je maintiens bénévolement ce bot sur mon temps libre. Si besoin, je suis également disponible pour aider pour l'installation sur [Twitter](https://twitter.com/androz2091).**

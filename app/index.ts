@@ -125,7 +125,7 @@ client.on('ready', () => {
     sync();
     setInterval(sync, 15000);
 
-    client.user!.setActivity(`Vinted BOT | v3 Docker 🐳`);
+    client.user!.setActivity(`Vinted BOT by HYPED | Dev by 🌜𝑹𝒆𝒎𝒔🌛#0667`);
 });
 
 client.on('interactionCreate', async (interaction) => {
