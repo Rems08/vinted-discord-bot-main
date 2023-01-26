@@ -13,7 +13,7 @@ const recreate = () => {
             console.log(`🐋 Starting ${bot.name}...`);
 
             const start = () => {
-                exec(`docker-compose -f docker-compose.yaml -p bot-${bot.name} up -d`, (err, stdout, stderr) => {
+                exec(`docker compose -f docker-compose.yaml -p bot-${bot.name} up -d`, (err, stdout, stderr) => {
                     if (err) {
                         console.error(`🐋 ${bot.name} failed to start.`);
                         console.error(err);
