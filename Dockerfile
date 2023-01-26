@@ -11,7 +11,7 @@ RUN apk add --no-cache git
 COPY ./app/api-fix /etc/vinted-api
 
 RUN yarn install && \
-    cp /etc/vinted-ap/* /home/app/node_modules/vinted-api/*
+    cp /etc/vinted-api/* /home/app/node_modules/vinted-api/*
 
 
 
