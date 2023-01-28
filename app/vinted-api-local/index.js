@@ -129,7 +129,9 @@ const search = (url, disableOrder = false, allowSwap = false, customParams = {})
             });
         }).catch((e) => {
             try {
-                if (JSON.parse(e).message === `Token d'authentification invalide test copy`) {
+                console.log(`[!] ${JSON.parse(e).message}`);
+                console.log(`[!] VERSION LOCALE`);
+                if (JSON.parse(e).message === `Token d'authentification invalide`) {
                     fetchCookie();
                 }
             } catch {}

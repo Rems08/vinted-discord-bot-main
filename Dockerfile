@@ -8,10 +8,10 @@ WORKDIR /home/app
 
 RUN apk add --no-cache git
 
-COPY ./app/api-fix /etc/vinted-api
+COPY ./app/vinted-api-local /etc/vinted-api-local
+RUN cd etc/vinted-api-local && npm install -S
 
-RUN yarn install && \
-    cp /etc/vinted-api/* /home/app/node_modules/vinted-api
+RUN yarn install
 
 
 

@@ -1,4 +1,4 @@
-const vinted = require("./");
+const vinted = require(".");
 
 test('fetch cookie', () => {
     return expect(vinted.fetchCookie()).resolves.not.toBeNull();
