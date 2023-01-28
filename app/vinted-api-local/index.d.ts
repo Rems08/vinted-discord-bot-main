@@ -1,4 +1,4 @@
-declare module 'vinted-api' {
+declare module 'vinted-api-local' {
 
     export interface VintedSearchResult {
         items: Record<string, any>[];
