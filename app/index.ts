@@ -3,7 +3,7 @@ const client = new Discord.Client({
     intents: [Discord.Intents.FLAGS.GUILDS]
 });
 
-import vinted from 'vinted-api';
+import vinted from 'vinted-api-local';
 import { initialize, Subscription } from './database';
 import { getConnection } from 'typeorm';
 
