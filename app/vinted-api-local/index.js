@@ -102,9 +102,9 @@ const search = (url, disableOrder = false, allowSwap = false, customParams = {})
         }
 
         var c = cookies.get(domain) ?? process.env[`VINTED_API_${domain.toUpperCase()}_COOKIE`];
-        // if (c) console.log(`[*] Using cached cookie for ${domain}`);
+        if (c) console.log(`[*] Using cached cookie for ${domain}`);
         if (!c) {
-            // console.log(`[*] Fetching cookie for ${domain}`);
+            console.log(`[*] Fetching cookie for ${domain}`);
             await fetchCookie(domain).catch(() => {});
             c = cookies.get(domain) ?? process.env[`VINTED_API_${domain.toUpperCase()}_COOKIE`];
         }
@@ -119,6 +119,8 @@ const search = (url, disableOrder = false, allowSwap = false, customParams = {})
                 accept: 'application/json, text/plain, */*'
             }
         }).then((res) => {
+            console.log("Fetching search API")
+            fetchCookie();
             res.text().then((text) => {
                 controller.abort();
                 try {
